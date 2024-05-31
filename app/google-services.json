@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "487760689885",
+    "project_id": "qrcodefatec",
+    "storage_bucket": "qrcodefatec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487760689885:android:458cb4148264219f617934",
+        "android_client_info": {
+          "package_name": "com.projetofatec.qrcode"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5kT0ymx0WA5B6JtuAHrDT_ln-euFJ3RA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
