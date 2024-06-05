@@ -5,12 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activites.LoginActivity"
+    tools:context=".activites.RegistrarActivity"
     android:orientation="vertical"
     android:gravity="center">
 
     <TextView
-        android:text="@string/login"
+        android:text="@string/registrar"
         android:textSize="25sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -28,7 +28,22 @@
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtEmail"
+            android:id="@+id/edtNomeRegistrar"
+            android:hint="Nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmailRegistrar"
             android:hint="@string/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -40,7 +55,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtSenha"
+            android:id="@+id/edtSenhaRegistrar"
             android:hint="@string/senha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,22 +72,21 @@
         android:layout_marginTop="20dp"/>
 
     <Button
-        android:id="@+id/btnLogin"
-        android:text="@string/login"
+        android:id="@+id/btnRegistrar1"
+        android:text="@string/registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginTop="20dp"
-        />
+        android:layout_marginTop="20dp"/>
 
     <TextView
-        android:id="@+id/txtRegistrar"
+        android:id="@+id/txtVoltar"
         android:textStyle="bold"
         android:textSize="20sp"
         android:gravity="center"
         android:layout_marginTop="20dp"
-        android:text="Registrar"
+        android:text="@string/voltar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

@@ -1,19 +1,20 @@
-package com.projetofatec.qrcode;
+package com.projetofatec.qrcode.activites;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class Presencas extends AppCompatActivity {
+import com.projetofatec.qrcode.R;
+
+public class Historico extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_presencas);
+
 
     }
 }
