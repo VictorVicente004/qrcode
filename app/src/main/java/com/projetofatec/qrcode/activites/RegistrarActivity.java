@@ -39,6 +39,18 @@ public class RegistrarActivity extends AppCompatActivity {
     private FirebaseFirestore db;
 
     @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar);
@@ -88,8 +100,11 @@ public class RegistrarActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
                             if (user != null) {
-                                Log.d(TAG, "Usuário criado com sucesso");
+                                Toast.makeText(RegistrarActivity.this, "Usuário criado com sucesso", Toast.LENGTH_SHORT).show();
                                 saveUserToFirestore(user, nomeStr);
+                                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                                startActivity(intent);
+                                finish();
                             } else {
                                 Log.e(TAG, "Usuário é nulo após criação");
                             }
@@ -129,9 +144,8 @@ public class RegistrarActivity extends AppCompatActivity {
 
     private void updateUI(FirebaseUser user, String nome) {
         if (user != null) {
-            Log.d(TAG, "Navegando para a MainActivity");
             Toast.makeText(RegistrarActivity.this, "Bem-vindo " + nome, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(RegistrarActivity.this, MainActivity.class);
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             intent.putExtra("nomeUsuario", nome);
             startActivity(intent);
             finish();

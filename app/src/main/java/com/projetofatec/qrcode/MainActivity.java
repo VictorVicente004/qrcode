@@ -21,6 +21,7 @@ import androidx.core.content.ContextCompat;
 
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
 import com.projetofatec.qrcode.activites.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -61,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
         btnSair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
